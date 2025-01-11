@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.chart-container {
+    position: relative;
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+#chart {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.bar {
+    fill: #3b82f6;
+    transition: fill 0.3s ease;
+}
+
+.bar:hover {
+    fill: #2563eb;
+}
+
+.tooltip {
+    position: absolute;
+    display: none;
+    background: #1e293b;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    pointer-events: none;
+    z-index: 10;
+    max-width: 200px;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px 5px 0;
+    border-style: solid;
+    border-color: #1e293b transparent transparent;
+}
+
+.axis {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.axis line {
+    stroke: #e2e8f0;
+}
+
+.axis path {
+    stroke: #cbd5e1;
+}
+
+.tick text {
+    fill: #64748b;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.source {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    #title {
+        font-size: 2rem;
+    }
+}
